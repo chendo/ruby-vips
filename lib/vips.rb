@@ -22,7 +22,7 @@ module GLib
     if FFI::Platform.windows?
         glib_libname = 'libglib-2.0-0.dll'
     else
-        glib_libname = 'glib-2.0' 
+      glib_libname = 'glib-2.0.so.0' 
     end
 
     ffi_lib glib_libname 
@@ -122,7 +122,7 @@ module GObject
     if FFI::Platform.windows?
         gobject_libname = 'libgobject-2.0-0.dll'
     else
-        gobject_libname = 'gobject-2.0'
+        gobject_libname = 'gobject-2.0.so.0'
     end
 
     ffi_lib gobject_libname
@@ -465,7 +465,7 @@ module Vips
     if FFI::Platform.windows?
         vips_libname = 'libvips-42.dll'
     else
-        vips_libname = 'vips'
+      vips_libname = 'vips.so.42'
     end
 
     ffi_lib vips_libname
